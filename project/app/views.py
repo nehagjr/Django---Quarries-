@@ -37,7 +37,10 @@ def index(request):
 
     d=Student.objects.get_or_create(Student_nm="Pawan Patel",email="pawan.gmail.com",city='gujrat',dep_nm='ML')
 
-    print(d)
+    d=Student.objects.all()
+    # print(d.exists())
+    
+    # print(d)
     return HttpResponse(d)
 
 
